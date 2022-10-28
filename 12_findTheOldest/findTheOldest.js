@@ -2,12 +2,10 @@ const findTheOldest = function(people) {
     // Get current year
     const currentYear = (new Date()).getFullYear();
 
-    // If person is living, return current year
-
-
     // Sort by oldest first
     const age = people.sort(function(a, b) {
 
+        // Check if person is still living
         if (a.yearOfDeath == undefined) {
             a.yearOfDeath = currentYear;
         } else if (b.yearOfDeath == undefined) {
